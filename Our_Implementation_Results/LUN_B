@@ -1,0 +1,360 @@
+tokenizer_config.json: 100%
+ 52.0/52.0 [00:00<00:00, 6.05kB/s]
+config.json: 100%
+ 579/579 [00:00<00:00, 76.3kB/s]
+spm.model: 100%
+ 2.46M/2.46M [00:00<00:00, 4.55MB/s]
+Dataset:  lun
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ ...
+ [0.00151515 0.00151515 0.0030303  0.         0.        ]
+ [0.         0.         0.00140647 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+pytorch_model.bin: 100%
+ 371M/371M [00:01<00:00, 408MB/s]
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:48<00:00,  2.31it/s]
+Iter 000 | Epoch 00000 | Train Acc. 0.9608 | Loss 1.0076
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:47<00:00,  2.32it/s]
+Iter 000 | Epoch 00001 | Train Acc. 0.9928 | Loss 0.6385
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:47<00:00,  2.32it/s]
+Iter 000 | Epoch 00002 | Train Acc. 0.9972 | Loss 0.4982
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:48<00:00,  2.31it/s]
+Iter 000 | Epoch 00003 | Train Acc. 0.9992 | Loss 0.4058
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:47<00:00,  2.32it/s]
+Iter 000 | Epoch 00004 | Train Acc. 0.9998 | Loss 0.3476
+100%|██████████| 375/375 [00:16<00:00, 22.21it/s]
+100%|██████████| 375/375 [00:16<00:00, 22.30it/s]
+-----------------End of Iter 000-----------------
+['Global Test Accuracy:0.9293', 'Precision:0.9296', 'Recall:0.9293', 'F1:0.9293']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8773', 'Precision:0.8792', 'Recall:0.8773', 'F1:0.8772']
+Dataset:  lun
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ ...
+ [0.00151515 0.00151515 0.0030303  0.         0.        ]
+ [0.         0.         0.00140647 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:51<00:00,  2.30it/s]
+Iter 001 | Epoch 00000 | Train Acc. 0.9638 | Loss 0.9782
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:49<00:00,  2.31it/s]
+Iter 001 | Epoch 00001 | Train Acc. 0.9920 | Loss 0.6405
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:49<00:00,  2.31it/s]
+Iter 001 | Epoch 00002 | Train Acc. 0.9973 | Loss 0.5090
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:49<00:00,  2.31it/s]
+Iter 001 | Epoch 00003 | Train Acc. 0.9988 | Loss 0.4194
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:48<00:00,  2.31it/s]
+Iter 001 | Epoch 00004 | Train Acc. 0.9995 | Loss 0.3493
+100%|██████████| 375/375 [00:16<00:00, 22.22it/s]
+100%|██████████| 375/375 [00:16<00:00, 22.32it/s]
+-----------------End of Iter 001-----------------
+['Global Test Accuracy:0.9207', 'Precision:0.9243', 'Recall:0.9207', 'F1:0.9205']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8793', 'Precision:0.8795', 'Recall:0.8793', 'F1:0.8793']
+Dataset:  lun
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ ...
+ [0.00151515 0.00151515 0.0030303  0.         0.        ]
+ [0.         0.         0.00140647 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:49<00:00,  2.31it/s]
+Iter 002 | Epoch 00000 | Train Acc. 0.9628 | Loss 0.9860
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:48<00:00,  2.31it/s]
+Iter 002 | Epoch 00001 | Train Acc. 0.9900 | Loss 0.6622
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:48<00:00,  2.31it/s]
+Iter 002 | Epoch 00002 | Train Acc. 0.9973 | Loss 0.4985
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:48<00:00,  2.31it/s]
+Iter 002 | Epoch 00003 | Train Acc. 0.9993 | Loss 0.4032
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:49<00:00,  2.31it/s]
+Iter 002 | Epoch 00004 | Train Acc. 0.9997 | Loss 0.3351
+100%|██████████| 375/375 [00:16<00:00, 22.21it/s]
+100%|██████████| 375/375 [00:16<00:00, 22.32it/s]
+-----------------End of Iter 002-----------------
+['Global Test Accuracy:0.9267', 'Precision:0.9292', 'Recall:0.9267', 'F1:0.9266']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8507', 'Precision:0.8507', 'Recall:0.8507', 'F1:0.8507']
+Dataset:  lun
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ ...
+ [0.00151515 0.00151515 0.0030303  0.         0.        ]
+ [0.         0.         0.00140647 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:49<00:00,  2.31it/s]
+Iter 003 | Epoch 00000 | Train Acc. 0.9602 | Loss 0.9847
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.31it/s]
+Iter 003 | Epoch 00001 | Train Acc. 0.9907 | Loss 0.6494
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:49<00:00,  2.31it/s]
+Iter 003 | Epoch 00002 | Train Acc. 0.9963 | Loss 0.5075
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.31it/s]
+Iter 003 | Epoch 00003 | Train Acc. 0.9978 | Loss 0.4107
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.31it/s]
+Iter 003 | Epoch 00004 | Train Acc. 0.9995 | Loss 0.3483
+100%|██████████| 375/375 [00:16<00:00, 22.13it/s]
+100%|██████████| 375/375 [00:16<00:00, 22.28it/s]
+-----------------End of Iter 003-----------------
+['Global Test Accuracy:0.9247', 'Precision:0.9294', 'Recall:0.9247', 'F1:0.9245']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8753', 'Precision:0.8775', 'Recall:0.8753', 'F1:0.8752']
+Dataset:  lun
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ ...
+ [0.00151515 0.00151515 0.0030303  0.         0.        ]
+ [0.         0.         0.00140647 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.31it/s]
+Iter 004 | Epoch 00000 | Train Acc. 0.9642 | Loss 0.9858
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.31it/s]
+Iter 004 | Epoch 00001 | Train Acc. 0.9938 | Loss 0.6243
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.31it/s]
+Iter 004 | Epoch 00002 | Train Acc. 0.9958 | Loss 0.4953
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:54<00:00,  2.29it/s]
+Iter 004 | Epoch 00003 | Train Acc. 0.9985 | Loss 0.3974
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:54<00:00,  2.29it/s]
+Iter 004 | Epoch 00004 | Train Acc. 0.9993 | Loss 0.3398
+100%|██████████| 375/375 [00:17<00:00, 21.93it/s]
+100%|██████████| 375/375 [00:16<00:00, 22.15it/s]
+-----------------End of Iter 004-----------------
+['Global Test Accuracy:0.9313', 'Precision:0.9314', 'Recall:0.9313', 'F1:0.9313']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8747', 'Precision:0.8776', 'Recall:0.8747', 'F1:0.8744']
+Dataset:  lun
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ ...
+ [0.00151515 0.00151515 0.0030303  0.         0.        ]
+ [0.         0.         0.00140647 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [11:05<00:00,  2.25it/s]
+Iter 005 | Epoch 00000 | Train Acc. 0.9633 | Loss 0.9892
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:49<00:00,  2.31it/s]
+Iter 005 | Epoch 00001 | Train Acc. 0.9930 | Loss 0.6381
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:49<00:00,  2.31it/s]
+Iter 005 | Epoch 00002 | Train Acc. 0.9967 | Loss 0.4881
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.31it/s]
+Iter 005 | Epoch 00003 | Train Acc. 0.9988 | Loss 0.4090
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:51<00:00,  2.30it/s]
+Iter 005 | Epoch 00004 | Train Acc. 0.9993 | Loss 0.3339
+100%|██████████| 375/375 [00:17<00:00, 22.04it/s]
+100%|██████████| 375/375 [00:16<00:00, 22.22it/s]
+-----------------End of Iter 005-----------------
+['Global Test Accuracy:0.9313', 'Precision:0.9337', 'Recall:0.9313', 'F1:0.9312']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8713', 'Precision:0.8716', 'Recall:0.8713', 'F1:0.8713']
+Dataset:  lun
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ ...
+ [0.00151515 0.00151515 0.0030303  0.         0.        ]
+ [0.         0.         0.00140647 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:49<00:00,  2.31it/s]
+Iter 006 | Epoch 00000 | Train Acc. 0.9600 | Loss 0.9892
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.30it/s]
+Iter 006 | Epoch 00001 | Train Acc. 0.9917 | Loss 0.6599
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.31it/s]
+Iter 006 | Epoch 00002 | Train Acc. 0.9950 | Loss 0.5340
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.31it/s]
+Iter 006 | Epoch 00003 | Train Acc. 0.9983 | Loss 0.4479
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.31it/s]
+Iter 006 | Epoch 00004 | Train Acc. 0.9990 | Loss 0.3729
+100%|██████████| 375/375 [00:16<00:00, 22.12it/s]
+100%|██████████| 375/375 [00:16<00:00, 22.23it/s]
+-----------------End of Iter 006-----------------
+['Global Test Accuracy:0.9247', 'Precision:0.9297', 'Recall:0.9247', 'F1:0.9244']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8773', 'Precision:0.8803', 'Recall:0.8773', 'F1:0.8771']
+Dataset:  lun
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ ...
+ [0.00151515 0.00151515 0.0030303  0.         0.        ]
+ [0.         0.         0.00140647 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:52<00:00,  2.30it/s]
+Iter 007 | Epoch 00000 | Train Acc. 0.9613 | Loss 0.9982
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.30it/s]
+Iter 007 | Epoch 00001 | Train Acc. 0.9920 | Loss 0.6476
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.30it/s]
+Iter 007 | Epoch 00002 | Train Acc. 0.9965 | Loss 0.5132
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.31it/s]
+Iter 007 | Epoch 00003 | Train Acc. 0.9988 | Loss 0.4189
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:51<00:00,  2.30it/s]
+Iter 007 | Epoch 00004 | Train Acc. 0.9988 | Loss 0.3383
+100%|██████████| 375/375 [00:16<00:00, 22.13it/s]
+100%|██████████| 375/375 [00:16<00:00, 22.28it/s]
+-----------------End of Iter 007-----------------
+['Global Test Accuracy:0.9160', 'Precision:0.9218', 'Recall:0.9160', 'F1:0.9157']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8653', 'Precision:0.8654', 'Recall:0.8653', 'F1:0.8653']
+Dataset:  lun
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ ...
+ [0.00151515 0.00151515 0.0030303  0.         0.        ]
+ [0.         0.         0.00140647 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:49<00:00,  2.31it/s]
+Iter 008 | Epoch 00000 | Train Acc. 0.9603 | Loss 1.0026
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.31it/s]
+Iter 008 | Epoch 00001 | Train Acc. 0.9917 | Loss 0.6290
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.31it/s]
+Iter 008 | Epoch 00002 | Train Acc. 0.9972 | Loss 0.5008
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.31it/s]
+Iter 008 | Epoch 00003 | Train Acc. 0.9985 | Loss 0.3993
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.31it/s]
+Iter 008 | Epoch 00004 | Train Acc. 0.9990 | Loss 0.3281
+100%|██████████| 375/375 [00:16<00:00, 22.10it/s]
+100%|██████████| 375/375 [00:16<00:00, 22.26it/s]
+-----------------End of Iter 008-----------------
+['Global Test Accuracy:0.9053', 'Precision:0.9146', 'Recall:0.9053', 'F1:0.9048']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8647', 'Precision:0.8717', 'Recall:0.8647', 'F1:0.8640']
+Dataset:  lun
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ ...
+ [0.00151515 0.00151515 0.0030303  0.         0.        ]
+ [0.         0.         0.00140647 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:51<00:00,  2.30it/s]
+Iter 009 | Epoch 00000 | Train Acc. 0.9668 | Loss 0.9804
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.31it/s]
+Iter 009 | Epoch 00001 | Train Acc. 0.9940 | Loss 0.6383
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.31it/s]
+Iter 009 | Epoch 00002 | Train Acc. 0.9975 | Loss 0.5026
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.30it/s]
+Iter 009 | Epoch 00003 | Train Acc. 0.9990 | Loss 0.4046
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [10:50<00:00,  2.31it/s]
+Iter 009 | Epoch 00004 | Train Acc. 0.9998 | Loss 0.3418
+100%|██████████| 375/375 [00:16<00:00, 22.19it/s]
+100%|██████████| 375/375 [00:16<00:00, 22.31it/s]
+-----------------End of Iter 009-----------------
+['Global Test Accuracy:0.9187', 'Precision:0.9253', 'Recall:0.9187', 'F1:0.9183']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8680', 'Precision:0.8711', 'Recall:0.8680', 'F1:0.8677']
+Total_Test_Accuracy: 0.9229|Prec_Macro: 0.9269|Rec_Macro: 0.9229|F1_Macro: 0.9227
+Restyle_Test_Accuracy: 0.8704|Prec_Macro: 0.8724|Rec_Macro: 0.8704|F1_Macro: 0.8702
