@@ -1,0 +1,360 @@
+tokenizer_config.json: 100%
+ 52.0/52.0 [00:00<00:00, 6.83kB/s]
+config.json: 100%
+ 579/579 [00:00<00:00, 73.6kB/s]
+spm.model: 100%
+ 2.46M/2.46M [00:01<00:00, 1.93MB/s]
+Dataset:  gossipcop
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.01111111 0.         0.         0.        ]
+ ...
+ [0.         0.         0.         0.         0.        ]
+ [0.00372671 0.         0.00372671 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+pytorch_model.bin: 100%
+ 371M/371M [00:01<00:00, 277MB/s]
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:51<00:00,  2.22it/s]
+Iter 000 | Epoch 00000 | Train Acc. 0.7585 | Loss 1.4910
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:52<00:00,  2.22it/s]
+Iter 000 | Epoch 00001 | Train Acc. 0.8302 | Loss 1.1755
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:52<00:00,  2.22it/s]
+Iter 000 | Epoch 00002 | Train Acc. 0.8841 | Loss 0.9835
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:53<00:00,  2.22it/s]
+Iter 000 | Epoch 00003 | Train Acc. 0.9201 | Loss 0.8220
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:53<00:00,  2.22it/s]
+Iter 000 | Epoch 00004 | Train Acc. 0.9509 | Loss 0.6680
+100%|██████████| 396/396 [00:20<00:00, 19.74it/s]
+100%|██████████| 396/396 [00:18<00:00, 21.52it/s]
+-----------------End of Iter 000-----------------
+['Global Test Accuracy:0.7601', 'Precision:0.7629', 'Recall:0.7601', 'F1:0.7595']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7614', 'Precision:0.7637', 'Recall:0.7614', 'F1:0.7608']
+Dataset:  gossipcop
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.01111111 0.         0.         0.        ]
+ ...
+ [0.         0.         0.         0.         0.        ]
+ [0.00372671 0.         0.00372671 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:55<00:00,  2.21it/s]
+Iter 001 | Epoch 00000 | Train Acc. 0.7603 | Loss 1.4793
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.21it/s]
+Iter 001 | Epoch 00001 | Train Acc. 0.8346 | Loss 1.1557
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.22it/s]
+Iter 001 | Epoch 00002 | Train Acc. 0.8787 | Loss 0.9733
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.22it/s]
+Iter 001 | Epoch 00003 | Train Acc. 0.9226 | Loss 0.7966
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.22it/s]
+Iter 001 | Epoch 00004 | Train Acc. 0.9526 | Loss 0.6564
+100%|██████████| 396/396 [00:20<00:00, 19.73it/s]
+100%|██████████| 396/396 [00:18<00:00, 21.58it/s]
+-----------------End of Iter 001-----------------
+['Global Test Accuracy:0.7601', 'Precision:0.7610', 'Recall:0.7601', 'F1:0.7599']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7487', 'Precision:0.7494', 'Recall:0.7487', 'F1:0.7486']
+Dataset:  gossipcop
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.01111111 0.         0.         0.        ]
+ ...
+ [0.         0.         0.         0.         0.        ]
+ [0.00372671 0.         0.00372671 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:55<00:00,  2.21it/s]
+Iter 002 | Epoch 00000 | Train Acc. 0.7639 | Loss 1.4885
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:56<00:00,  2.21it/s]
+Iter 002 | Epoch 00001 | Train Acc. 0.8348 | Loss 1.1626
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:56<00:00,  2.21it/s]
+Iter 002 | Epoch 00002 | Train Acc. 0.8816 | Loss 0.9913
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:55<00:00,  2.21it/s]
+Iter 002 | Epoch 00003 | Train Acc. 0.9207 | Loss 0.8190
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.22it/s]
+Iter 002 | Epoch 00004 | Train Acc. 0.9503 | Loss 0.6703
+100%|██████████| 396/396 [00:20<00:00, 19.69it/s]
+100%|██████████| 396/396 [00:18<00:00, 21.59it/s]
+-----------------End of Iter 002-----------------
+['Global Test Accuracy:0.7620', 'Precision:0.7632', 'Recall:0.7620', 'F1:0.7617']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7462', 'Precision:0.7479', 'Recall:0.7462', 'F1:0.7458']
+Dataset:  gossipcop
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.01111111 0.         0.         0.        ]
+ ...
+ [0.         0.         0.         0.         0.        ]
+ [0.00372671 0.         0.00372671 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:56<00:00,  2.21it/s]
+Iter 003 | Epoch 00000 | Train Acc. 0.7576 | Loss 1.4759
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:56<00:00,  2.21it/s]
+Iter 003 | Epoch 00001 | Train Acc. 0.8369 | Loss 1.1674
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.22it/s]
+Iter 003 | Epoch 00002 | Train Acc. 0.8825 | Loss 0.9806
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.22it/s]
+Iter 003 | Epoch 00003 | Train Acc. 0.9231 | Loss 0.8143
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.22it/s]
+Iter 003 | Epoch 00004 | Train Acc. 0.9529 | Loss 0.6515
+100%|██████████| 396/396 [00:20<00:00, 19.74it/s]
+100%|██████████| 396/396 [00:18<00:00, 21.59it/s]
+-----------------End of Iter 003-----------------
+['Global Test Accuracy:0.7551', 'Precision:0.7594', 'Recall:0.7551', 'F1:0.7540']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7456', 'Precision:0.7495', 'Recall:0.7456', 'F1:0.7446']
+Dataset:  gossipcop
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.01111111 0.         0.         0.        ]
+ ...
+ [0.         0.         0.         0.         0.        ]
+ [0.00372671 0.         0.00372671 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.21it/s]
+Iter 004 | Epoch 00000 | Train Acc. 0.7612 | Loss 1.4786
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.21it/s]
+Iter 004 | Epoch 00001 | Train Acc. 0.8291 | Loss 1.1746
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.22it/s]
+Iter 004 | Epoch 00002 | Train Acc. 0.8808 | Loss 0.9823
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.22it/s]
+Iter 004 | Epoch 00003 | Train Acc. 0.9272 | Loss 0.7797
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.22it/s]
+Iter 004 | Epoch 00004 | Train Acc. 0.9604 | Loss 0.6279
+100%|██████████| 396/396 [00:20<00:00, 19.76it/s]
+100%|██████████| 396/396 [00:18<00:00, 21.59it/s]
+-----------------End of Iter 004-----------------
+['Global Test Accuracy:0.7626', 'Precision:0.7626', 'Recall:0.7626', 'F1:0.7626']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7551', 'Precision:0.7551', 'Recall:0.7551', 'F1:0.7551']
+Dataset:  gossipcop
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.01111111 0.         0.         0.        ]
+ ...
+ [0.         0.         0.         0.         0.        ]
+ [0.00372671 0.         0.00372671 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:55<00:00,  2.21it/s]
+Iter 005 | Epoch 00000 | Train Acc. 0.7573 | Loss 1.4894
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.21it/s]
+Iter 005 | Epoch 00001 | Train Acc. 0.8365 | Loss 1.1723
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.21it/s]
+Iter 005 | Epoch 00002 | Train Acc. 0.8726 | Loss 0.9965
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.21it/s]
+Iter 005 | Epoch 00003 | Train Acc. 0.9195 | Loss 0.8183
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:55<00:00,  2.21it/s]
+Iter 005 | Epoch 00004 | Train Acc. 0.9469 | Loss 0.6759
+100%|██████████| 396/396 [00:20<00:00, 19.29it/s]
+100%|██████████| 396/396 [00:18<00:00, 21.56it/s]
+-----------------End of Iter 005-----------------
+['Global Test Accuracy:0.7449', 'Precision:0.7450', 'Recall:0.7449', 'F1:0.7449']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7348', 'Precision:0.7351', 'Recall:0.7348', 'F1:0.7348']
+Dataset:  gossipcop
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.01111111 0.         0.         0.        ]
+ ...
+ [0.         0.         0.         0.         0.        ]
+ [0.00372671 0.         0.00372671 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:55<00:00,  2.21it/s]
+Iter 006 | Epoch 00000 | Train Acc. 0.7566 | Loss 1.4700
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:55<00:00,  2.21it/s]
+Iter 006 | Epoch 00001 | Train Acc. 0.8342 | Loss 1.1645
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:55<00:00,  2.21it/s]
+Iter 006 | Epoch 00002 | Train Acc. 0.8800 | Loss 0.9806
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:55<00:00,  2.21it/s]
+Iter 006 | Epoch 00003 | Train Acc. 0.9220 | Loss 0.8005
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.21it/s]
+Iter 006 | Epoch 00004 | Train Acc. 0.9534 | Loss 0.6625
+100%|██████████| 396/396 [00:20<00:00, 19.67it/s]
+100%|██████████| 396/396 [00:18<00:00, 21.60it/s]
+-----------------End of Iter 006-----------------
+['Global Test Accuracy:0.7595', 'Precision:0.7643', 'Recall:0.7595', 'F1:0.7584']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7342', 'Precision:0.7408', 'Recall:0.7342', 'F1:0.7324']
+Dataset:  gossipcop
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.01111111 0.         0.         0.        ]
+ ...
+ [0.         0.         0.         0.         0.        ]
+ [0.00372671 0.         0.00372671 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:55<00:00,  2.21it/s]
+Iter 007 | Epoch 00000 | Train Acc. 0.7517 | Loss 1.4871
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:55<00:00,  2.21it/s]
+Iter 007 | Epoch 00001 | Train Acc. 0.8332 | Loss 1.1851
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:55<00:00,  2.21it/s]
+Iter 007 | Epoch 00002 | Train Acc. 0.8793 | Loss 1.0001
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:55<00:00,  2.21it/s]
+Iter 007 | Epoch 00003 | Train Acc. 0.9191 | Loss 0.8202
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:55<00:00,  2.21it/s]
+Iter 007 | Epoch 00004 | Train Acc. 0.9510 | Loss 0.6699
+100%|██████████| 396/396 [00:20<00:00, 19.74it/s]
+100%|██████████| 396/396 [00:18<00:00, 21.59it/s]
+-----------------End of Iter 007-----------------
+['Global Test Accuracy:0.7551', 'Precision:0.7565', 'Recall:0.7551', 'F1:0.7547']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7487', 'Precision:0.7490', 'Recall:0.7487', 'F1:0.7487']
+Dataset:  gossipcop
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.01111111 0.         0.         0.        ]
+ ...
+ [0.         0.         0.         0.         0.        ]
+ [0.00372671 0.         0.00372671 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.22it/s]
+Iter 008 | Epoch 00000 | Train Acc. 0.7694 | Loss 1.4906
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.22it/s]
+Iter 008 | Epoch 00001 | Train Acc. 0.8367 | Loss 1.1720
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:55<00:00,  2.21it/s]
+Iter 008 | Epoch 00002 | Train Acc. 0.8836 | Loss 0.9684
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.22it/s]
+Iter 008 | Epoch 00003 | Train Acc. 0.9262 | Loss 0.7862
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.22it/s]
+Iter 008 | Epoch 00004 | Train Acc. 0.9570 | Loss 0.6413
+100%|██████████| 396/396 [00:20<00:00, 19.79it/s]
+100%|██████████| 396/396 [00:18<00:00, 21.62it/s]
+-----------------End of Iter 008-----------------
+['Global Test Accuracy:0.7563', 'Precision:0.7594', 'Recall:0.7563', 'F1:0.7556']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7468', 'Precision:0.7503', 'Recall:0.7468', 'F1:0.7460']
+Dataset:  gossipcop
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.01111111 0.         0.         0.        ]
+ ...
+ [0.         0.         0.         0.         0.        ]
+ [0.00372671 0.         0.00372671 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:55<00:00,  2.21it/s]
+Iter 009 | Epoch 00000 | Train Acc. 0.7538 | Loss 1.4984
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.21it/s]
+Iter 009 | Epoch 00001 | Train Acc. 0.8348 | Loss 1.1760
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.22it/s]
+Iter 009 | Epoch 00002 | Train Acc. 0.8749 | Loss 0.9980
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:54<00:00,  2.22it/s]
+Iter 009 | Epoch 00003 | Train Acc. 0.9166 | Loss 0.8240
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [11:55<00:00,  2.21it/s]
+Iter 009 | Epoch 00004 | Train Acc. 0.9501 | Loss 0.6790
+100%|██████████| 396/396 [00:20<00:00, 19.67it/s]
+100%|██████████| 396/396 [00:18<00:00, 21.57it/s]
+-----------------End of Iter 009-----------------
+['Global Test Accuracy:0.7620', 'Precision:0.7620', 'Recall:0.7620', 'F1:0.7620']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7405', 'Precision:0.7405', 'Recall:0.7405', 'F1:0.7405']
+Total_Test_Accuracy: 0.7578|Prec_Macro: 0.7596|Rec_Macro: 0.7578|F1_Macro: 0.7573
+Restyle_Test_Accuracy: 0.7462|Prec_Macro: 0.7481|Rec_Macro: 0.7462|F1_Macro: 0.7457
