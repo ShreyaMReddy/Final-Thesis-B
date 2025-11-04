@@ -1,0 +1,88 @@
+tokenizer_config.json: 100%
+ 25.0/25.0 [00:00<00:00, 2.92kB/s]
+config.json: 100%
+ 481/481 [00:00<00:00, 50.8kB/s]
+vocab.json: 100%
+ 899k/899k [00:00<00:00, 4.12MB/s]
+merges.txt: 100%
+ 456k/456k [00:00<00:00, 46.7MB/s]
+tokenizer.json: 100%
+ 1.36M/1.36M [00:00<00:00, 3.10MB/s]
+Dataset:  lun
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ ...
+ [0.00151515 0.00151515 0.0030303  0.         0.        ]
+ [0.         0.         0.00140647 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+model.safetensors: 100%
+ 499M/499M [00:01<00:00, 544MB/s]
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [07:39<00:00,  3.26it/s]
+Iter 000 | Epoch 00000 | Train Acc. 0.9642 | Loss 0.9438
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [07:38<00:00,  3.27it/s]
+Iter 000 | Epoch 00001 | Train Acc. 0.9910 | Loss 0.6277
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [07:38<00:00,  3.27it/s]
+Iter 000 | Epoch 00002 | Train Acc. 0.9973 | Loss 0.4914
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [07:38<00:00,  3.27it/s]
+Iter 000 | Epoch 00003 | Train Acc. 0.9987 | Loss 0.3965
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [07:38<00:00,  3.27it/s]
+Iter 000 | Epoch 00004 | Train Acc. 0.9985 | Loss 0.3365
+100%|██████████| 375/375 [00:11<00:00, 31.96it/s]
+100%|██████████| 375/375 [00:11<00:00, 32.11it/s]
+-----------------End of Iter 000-----------------
+['Global Test Accuracy:0.9340', 'Precision:0.9360', 'Recall:0.9340', 'F1:0.9339']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8633', 'Precision:0.8636', 'Recall:0.8633', 'F1:0.8633']
+Dataset:  lun
+loading news articles
+LIWC features extracted [[0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ [0.         0.         0.         0.         0.        ]
+ ...
+ [0.00151515 0.00151515 0.0030303  0.         0.        ]
+ [0.         0.         0.00140647 0.         0.        ]
+ [0.         0.         0.         0.         0.        ]]
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [07:39<00:00,  3.26it/s]
+Iter 001 | Epoch 00000 | Train Acc. 0.9602 | Loss 0.9273
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [07:39<00:00,  3.26it/s]
+Iter 001 | Epoch 00001 | Train Acc. 0.9913 | Loss 0.6272
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [07:39<00:00,  3.26it/s]
+Iter 001 | Epoch 00002 | Train Acc. 0.9970 | Loss 0.4962
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [07:40<00:00,  3.26it/s]
+Iter 001 | Epoch 00003 | Train Acc. 0.9987 | Loss 0.3945
+loading news augmentations
+Dataset:  lun
+100%|██████████| 1500/1500 [07:39<00:00,  3.26it/s]
+Iter 001 | Epoch 00004 | Train Acc. 0.9997 | Loss 0.3340
+100%|██████████| 375/375 [00:11<00:00, 31.95it/s]
+100%|██████████| 375/375 [00:11<00:00, 32.09it/s]
+-----------------End of Iter 001-----------------
+['Global Test Accuracy:0.9260', 'Precision:0.9265', 'Recall:0.9260', 'F1:0.9260']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8573', 'Precision:0.8592', 'Recall:0.8573', 'F1:0.8571']
+Total_Test_Accuracy: 0.9300|Prec_Macro: 0.9312|Rec_Macro: 0.9300|F1_Macro: 0.9300
+Restyle_Test_Accuracy: 0.8603|Prec_Macro: 0.8614|Rec_Macro: 0.8603|F1_Macro: 0.8602
