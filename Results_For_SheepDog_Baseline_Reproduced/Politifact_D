@@ -1,0 +1,314 @@
+tokenizer_config.json: 100%
+ 25.0/25.0 [00:00<00:00, 2.28kB/s]
+vocab.json: 100%
+ 899k/899k [00:00<00:00, 25.2MB/s]
+merges.txt: 100%
+ 456k/456k [00:00<00:00, 2.76MB/s]
+tokenizer.json: 100%
+ 1.36M/1.36M [00:00<00:00, 4.13MB/s]
+config.json: 100%
+ 481/481 [00:00<00:00, 66.6kB/s]
+Dataset:  politifact
+loading news articles
+model.safetensors: 100%
+ 499M/499M [00:01<00:00, 663MB/s]
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.33it/s]
+Iter 000 | Epoch 00000 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.41it/s]
+Iter 000 | Epoch 00001 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 000 | Epoch 00002 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.39it/s]
+Iter 000 | Epoch 00003 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.38it/s]
+Iter 000 | Epoch 00004 | Train Acc. 1.0000
+100%|██████████| 23/23 [00:01<00:00, 16.37it/s]
+100%|██████████| 23/23 [00:00<00:00, 32.66it/s]
+-----------------End of Iter 000-----------------
+['Global Test Accuracy:0.9000', 'Precision:0.9018', 'Recall:0.9000', 'F1:0.8999']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8000', 'Precision:0.8098', 'Recall:0.8000', 'F1:0.7984']
+Dataset:  politifact
+loading news articles
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 001 | Epoch 00000 | Train Acc. 0.5000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 001 | Epoch 00001 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 001 | Epoch 00002 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.39it/s]
+Iter 001 | Epoch 00003 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.39it/s]
+Iter 001 | Epoch 00004 | Train Acc. 1.0000
+100%|██████████| 23/23 [00:01<00:00, 21.22it/s]
+100%|██████████| 23/23 [00:00<00:00, 32.75it/s]
+-----------------End of Iter 001-----------------
+['Global Test Accuracy:0.8667', 'Precision:0.8733', 'Recall:0.8667', 'F1:0.8661']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7889', 'Precision:0.7890', 'Recall:0.7889', 'F1:0.7889']
+Dataset:  politifact
+loading news articles
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 002 | Epoch 00000 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 002 | Epoch 00001 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.39it/s]
+Iter 002 | Epoch 00002 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.39it/s]
+Iter 002 | Epoch 00003 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 002 | Epoch 00004 | Train Acc. 1.0000
+100%|██████████| 23/23 [00:01<00:00, 21.55it/s]
+100%|██████████| 23/23 [00:00<00:00, 32.70it/s]
+-----------------End of Iter 002-----------------
+['Global Test Accuracy:0.8556', 'Precision:0.8600', 'Recall:0.8556', 'F1:0.8551']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7889', 'Precision:0.8009', 'Recall:0.7889', 'F1:0.7868']
+Dataset:  politifact
+loading news articles
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 003 | Epoch 00000 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 003 | Epoch 00001 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 003 | Epoch 00002 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 003 | Epoch 00003 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.39it/s]
+Iter 003 | Epoch 00004 | Train Acc. 1.0000
+100%|██████████| 23/23 [00:01<00:00, 21.63it/s]
+100%|██████████| 23/23 [00:00<00:00, 32.76it/s]
+-----------------End of Iter 003-----------------
+['Global Test Accuracy:0.8667', 'Precision:0.8667', 'Recall:0.8667', 'F1:0.8667']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7889', 'Precision:0.7890', 'Recall:0.7889', 'F1:0.7889']
+Dataset:  politifact
+loading news articles
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.37it/s]
+Iter 004 | Epoch 00000 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.41it/s]
+Iter 004 | Epoch 00001 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 004 | Epoch 00002 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 004 | Epoch 00003 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 004 | Epoch 00004 | Train Acc. 1.0000
+100%|██████████| 23/23 [00:01<00:00, 21.35it/s]
+100%|██████████| 23/23 [00:00<00:00, 32.63it/s]
+-----------------End of Iter 004-----------------
+['Global Test Accuracy:0.8667', 'Precision:0.8667', 'Recall:0.8667', 'F1:0.8667']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8111', 'Precision:0.8125', 'Recall:0.8111', 'F1:0.8109']
+Dataset:  politifact
+loading news articles
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 005 | Epoch 00000 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 005 | Epoch 00001 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 005 | Epoch 00002 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 005 | Epoch 00003 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 005 | Epoch 00004 | Train Acc. 1.0000
+100%|██████████| 23/23 [00:01<00:00, 21.63it/s]
+100%|██████████| 23/23 [00:00<00:00, 32.74it/s]
+-----------------End of Iter 005-----------------
+['Global Test Accuracy:0.8222', 'Precision:0.8469', 'Recall:0.8222', 'F1:0.8190']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7889', 'Precision:0.8152', 'Recall:0.7889', 'F1:0.7844']
+Dataset:  politifact
+loading news articles
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.39it/s]
+Iter 006 | Epoch 00000 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 006 | Epoch 00001 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.39it/s]
+Iter 006 | Epoch 00002 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 006 | Epoch 00003 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 006 | Epoch 00004 | Train Acc. 1.0000
+100%|██████████| 23/23 [00:01<00:00, 21.70it/s]
+100%|██████████| 23/23 [00:00<00:00, 32.84it/s]
+-----------------End of Iter 006-----------------
+['Global Test Accuracy:0.8222', 'Precision:0.8469', 'Recall:0.8222', 'F1:0.8190']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7778', 'Precision:0.8307', 'Recall:0.7778', 'F1:0.7685']
+Dataset:  politifact
+loading news articles
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 007 | Epoch 00000 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.39it/s]
+Iter 007 | Epoch 00001 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.39it/s]
+Iter 007 | Epoch 00002 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 007 | Epoch 00003 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 007 | Epoch 00004 | Train Acc. 1.0000
+100%|██████████| 23/23 [00:01<00:00, 21.12it/s]
+100%|██████████| 23/23 [00:00<00:00, 32.79it/s]
+-----------------End of Iter 007-----------------
+['Global Test Accuracy:0.8556', 'Precision:0.8600', 'Recall:0.8556', 'F1:0.8551']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8000', 'Precision:0.8006', 'Recall:0.8000', 'F1:0.7999']
+Dataset:  politifact
+loading news articles
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 008 | Epoch 00000 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 008 | Epoch 00001 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.39it/s]
+Iter 008 | Epoch 00002 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 008 | Epoch 00003 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.41it/s]
+Iter 008 | Epoch 00004 | Train Acc. 1.0000
+100%|██████████| 23/23 [00:01<00:00, 21.40it/s]
+100%|██████████| 23/23 [00:00<00:00, 32.78it/s]
+-----------------End of Iter 008-----------------
+['Global Test Accuracy:0.9222', 'Precision:0.9241', 'Recall:0.9222', 'F1:0.9221']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8000', 'Precision:0.8006', 'Recall:0.8000', 'F1:0.7999']
+Dataset:  politifact
+loading news articles
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.39it/s]
+Iter 009 | Epoch 00000 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 009 | Epoch 00001 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.39it/s]
+Iter 009 | Epoch 00002 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 009 | Epoch 00003 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  politifact
+100%|██████████| 90/90 [00:26<00:00,  3.40it/s]
+Iter 009 | Epoch 00004 | Train Acc. 1.0000
+100%|██████████| 23/23 [00:01<00:00, 21.63it/s]
+100%|██████████| 23/23 [00:00<00:00, 32.75it/s]
+-----------------End of Iter 009-----------------
+['Global Test Accuracy:0.9111', 'Precision:0.9119', 'Recall:0.9111', 'F1:0.9111']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8222', 'Precision:0.8229', 'Recall:0.8222', 'F1:0.8221']
+Total_Test_Accuracy: 0.8689|Prec_Macro: 0.8758|Rec_Macro: 0.8689|F1_Macro: 0.8681
+Restyle_Test_Accuracy: 0.7967|Prec_Macro: 0.8071|Rec_Macro: 0.7967|F1_Macro: 0.7949
