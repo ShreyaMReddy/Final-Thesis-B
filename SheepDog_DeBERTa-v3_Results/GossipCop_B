@@ -1,0 +1,142 @@
+Dataset: gossipcop
+loading news articles
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:36<00:00,  2.49it/s]
+Iter 000 | Epoch 00000 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 000 | Epoch 00001 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 000 | Epoch 00002 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 000 | Epoch 00003 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 000 | Epoch 00004 complete
+100%|██████████| 396/396 [00:19<00:00, 20.82it/s]
+100%|██████████| 396/396 [00:17<00:00, 22.44it/s]
+-----------------End of Iter 000-----------------
+['Global Test Accuracy:0.7557', 'Precision:0.7588', 'Recall:0.7557', 'F1:0.7549']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7449', 'Precision:0.7479', 'Recall:0.7449', 'F1:0.7442']
+Dataset: gossipcop
+loading news articles
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 001 | Epoch 00000 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 001 | Epoch 00001 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 001 | Epoch 00002 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 001 | Epoch 00003 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 001 | Epoch 00004 complete
+100%|██████████| 396/396 [00:19<00:00, 20.75it/s]
+100%|██████████| 396/396 [00:17<00:00, 22.41it/s]
+-----------------End of Iter 001-----------------
+['Global Test Accuracy:0.7563', 'Precision:0.7564', 'Recall:0.7563', 'F1:0.7563']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7386', 'Precision:0.7386', 'Recall:0.7386', 'F1:0.7386']
+Dataset: gossipcop
+loading news articles
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 002 | Epoch 00000 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 002 | Epoch 00001 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 002 | Epoch 00002 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 002 | Epoch 00003 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 002 | Epoch 00004 complete
+100%|██████████| 396/396 [00:19<00:00, 20.80it/s]
+100%|██████████| 396/396 [00:17<00:00, 22.42it/s]
+-----------------End of Iter 002-----------------
+['Global Test Accuracy:0.7645', 'Precision:0.7646', 'Recall:0.7645', 'F1:0.7645']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7481', 'Precision:0.7483', 'Recall:0.7481', 'F1:0.7481']
+Dataset: gossipcop
+loading news articles
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 003 | Epoch 00000 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 003 | Epoch 00001 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 003 | Epoch 00002 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 003 | Epoch 00003 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 003 | Epoch 00004 complete
+100%|██████████| 396/396 [00:19<00:00, 20.77it/s]
+100%|██████████| 396/396 [00:17<00:00, 22.42it/s]
+-----------------End of Iter 003-----------------
+['Global Test Accuracy:0.7607', 'Precision:0.7609', 'Recall:0.7607', 'F1:0.7607']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7513', 'Precision:0.7519', 'Recall:0.7513', 'F1:0.7511']
+Dataset: gossipcop
+loading news articles
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 004 | Epoch 00000 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 004 | Epoch 00001 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:35<00:00,  2.49it/s]
+Iter 004 | Epoch 00002 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:35<00:00,  2.49it/s]
+Iter 004 | Epoch 00003 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:34<00:00,  2.49it/s]
+Iter 004 | Epoch 00004 complete
+100%|██████████| 396/396 [00:19<00:00, 20.80it/s]
+100%|██████████| 396/396 [00:17<00:00, 22.42it/s]
+-----------------End of Iter 004-----------------
+['Global Test Accuracy:0.7475', 'Precision:0.7477', 'Recall:0.7475', 'F1:0.7474']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7443', 'Precision:0.7449', 'Recall:0.7443', 'F1:0.7442']
+Total_Test_Accuracy: 0.7569|Prec_Macro: 0.7577|Rec_Macro: 0.7569|F1_Macro: 0.7568
+Restyle_Test_Accuracy: 0.7455|Prec_Macro: 0.7463|Rec_Macro: 0.7455|F1_Macro: 0.7452
