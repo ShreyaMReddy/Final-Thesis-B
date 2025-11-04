@@ -1,0 +1,314 @@
+tokenizer_config.json: 100%
+ 25.0/25.0 [00:00<00:00, 3.16kB/s]
+vocab.json: 100%
+ 899k/899k [00:00<00:00, 4.01MB/s]
+merges.txt: 100%
+ 456k/456k [00:00<00:00, 21.7MB/s]
+tokenizer.json: 100%
+ 1.36M/1.36M [00:00<00:00, 5.73MB/s]
+config.json: 100%
+ 481/481 [00:00<00:00, 55.6kB/s]
+Dataset:  gossipcop
+loading news articles
+model.safetensors: 100%
+ 499M/499M [00:01<00:00, 516MB/s]
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:42<00:00,  3.42it/s]
+Iter 000 | Epoch 00000 | Train Acc. 0.2500
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:42<00:00,  3.42it/s]
+Iter 000 | Epoch 00001 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:42<00:00,  3.42it/s]
+Iter 000 | Epoch 00002 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 000 | Epoch 00003 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:42<00:00,  3.42it/s]
+Iter 000 | Epoch 00004 | Train Acc. 1.0000
+100%|██████████| 396/396 [00:15<00:00, 25.67it/s]
+100%|██████████| 396/396 [00:12<00:00, 32.04it/s]
+-----------------End of Iter 000-----------------
+['Global Test Accuracy:0.7645', 'Precision:0.7653', 'Recall:0.7645', 'F1:0.7643']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7557', 'Precision:0.7561', 'Recall:0.7557', 'F1:0.7556']
+Dataset:  gossipcop
+loading news articles
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:42<00:00,  3.42it/s]
+Iter 001 | Epoch 00000 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 001 | Epoch 00001 | Train Acc. 0.2500
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 001 | Epoch 00002 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 001 | Epoch 00003 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 001 | Epoch 00004 | Train Acc. 0.7500
+100%|██████████| 396/396 [00:14<00:00, 27.33it/s]
+100%|██████████| 396/396 [00:12<00:00, 32.16it/s]
+-----------------End of Iter 001-----------------
+['Global Test Accuracy:0.7588', 'Precision:0.7589', 'Recall:0.7588', 'F1:0.7588']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7588', 'Precision:0.7596', 'Recall:0.7588', 'F1:0.7587']
+Dataset:  gossipcop
+loading news articles
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:42<00:00,  3.42it/s]
+Iter 002 | Epoch 00000 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 002 | Epoch 00001 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 002 | Epoch 00002 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 002 | Epoch 00003 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 002 | Epoch 00004 | Train Acc. 1.0000
+100%|██████████| 396/396 [00:14<00:00, 27.08it/s]
+100%|██████████| 396/396 [00:12<00:00, 32.05it/s]
+-----------------End of Iter 002-----------------
+['Global Test Accuracy:0.7626', 'Precision:0.7634', 'Recall:0.7626', 'F1:0.7625']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7645', 'Precision:0.7658', 'Recall:0.7645', 'F1:0.7642']
+Dataset:  gossipcop
+loading news articles
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:42<00:00,  3.42it/s]
+Iter 003 | Epoch 00000 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 003 | Epoch 00001 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 003 | Epoch 00002 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 003 | Epoch 00003 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 003 | Epoch 00004 | Train Acc. 1.0000
+100%|██████████| 396/396 [00:14<00:00, 27.32it/s]
+100%|██████████| 396/396 [00:12<00:00, 32.12it/s]
+-----------------End of Iter 003-----------------
+['Global Test Accuracy:0.7620', 'Precision:0.7650', 'Recall:0.7620', 'F1:0.7613']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7601', 'Precision:0.7640', 'Recall:0.7601', 'F1:0.7592']
+Dataset:  gossipcop
+loading news articles
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 004 | Epoch 00000 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 004 | Epoch 00001 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 004 | Epoch 00002 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 004 | Epoch 00003 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 004 | Epoch 00004 | Train Acc. 1.0000
+100%|██████████| 396/396 [00:14<00:00, 27.47it/s]
+100%|██████████| 396/396 [00:12<00:00, 32.14it/s]
+-----------------End of Iter 004-----------------
+['Global Test Accuracy:0.7576', 'Precision:0.7587', 'Recall:0.7576', 'F1:0.7573']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7557', 'Precision:0.7575', 'Recall:0.7557', 'F1:0.7552']
+Dataset:  gossipcop
+loading news articles
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:42<00:00,  3.42it/s]
+Iter 005 | Epoch 00000 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 005 | Epoch 00001 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 005 | Epoch 00002 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 005 | Epoch 00003 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 005 | Epoch 00004 | Train Acc. 1.0000
+100%|██████████| 396/396 [00:14<00:00, 27.39it/s]
+100%|██████████| 396/396 [00:12<00:00, 32.14it/s]
+-----------------End of Iter 005-----------------
+['Global Test Accuracy:0.7551', 'Precision:0.7577', 'Recall:0.7551', 'F1:0.7544']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7519', 'Precision:0.7553', 'Recall:0.7519', 'F1:0.7511']
+Dataset:  gossipcop
+loading news articles
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:42<00:00,  3.42it/s]
+Iter 006 | Epoch 00000 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 006 | Epoch 00001 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 006 | Epoch 00002 | Train Acc. 0.5000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 006 | Epoch 00003 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 006 | Epoch 00004 | Train Acc. 1.0000
+100%|██████████| 396/396 [00:14<00:00, 27.56it/s]
+100%|██████████| 396/396 [00:12<00:00, 32.15it/s]
+-----------------End of Iter 006-----------------
+['Global Test Accuracy:0.7607', 'Precision:0.7609', 'Recall:0.7607', 'F1:0.7607']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7576', 'Precision:0.7579', 'Recall:0.7576', 'F1:0.7575']
+Dataset:  gossipcop
+loading news articles
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:42<00:00,  3.42it/s]
+Iter 007 | Epoch 00000 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 007 | Epoch 00001 | Train Acc. 0.2500
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 007 | Epoch 00002 | Train Acc. 0.5000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 007 | Epoch 00003 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 007 | Epoch 00004 | Train Acc. 0.7500
+100%|██████████| 396/396 [00:14<00:00, 27.35it/s]
+100%|██████████| 396/396 [00:12<00:00, 32.13it/s]
+-----------------End of Iter 007-----------------
+['Global Test Accuracy:0.7519', 'Precision:0.7546', 'Recall:0.7519', 'F1:0.7512']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7551', 'Precision:0.7571', 'Recall:0.7551', 'F1:0.7546']
+Dataset:  gossipcop
+loading news articles
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:42<00:00,  3.42it/s]
+Iter 008 | Epoch 00000 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 008 | Epoch 00001 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 008 | Epoch 00002 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 008 | Epoch 00003 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 008 | Epoch 00004 | Train Acc. 1.0000
+100%|██████████| 396/396 [00:14<00:00, 27.35it/s]
+100%|██████████| 396/396 [00:12<00:00, 31.96it/s]
+-----------------End of Iter 008-----------------
+['Global Test Accuracy:0.7633', 'Precision:0.7640', 'Recall:0.7633', 'F1:0.7631']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7683', 'Precision:0.7684', 'Recall:0.7683', 'F1:0.7683']
+Dataset:  gossipcop
+loading news articles
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:42<00:00,  3.42it/s]
+Iter 009 | Epoch 00000 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 009 | Epoch 00001 | Train Acc. 0.7500
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 009 | Epoch 00002 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.42it/s]
+Iter 009 | Epoch 00003 | Train Acc. 1.0000
+loading news augmentations
+Dataset:  gossipcop
+100%|██████████| 1583/1583 [07:43<00:00,  3.41it/s]
+Iter 009 | Epoch 00004 | Train Acc. 1.0000
+100%|██████████| 396/396 [00:14<00:00, 27.42it/s]
+100%|██████████| 396/396 [00:12<00:00, 32.13it/s]
+-----------------End of Iter 009-----------------
+['Global Test Accuracy:0.7487', 'Precision:0.7498', 'Recall:0.7487', 'F1:0.7485']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7532', 'Precision:0.7540', 'Recall:0.7532', 'F1:0.7530']
+Total_Test_Accuracy: 0.7585|Prec_Macro: 0.7598|Rec_Macro: 0.7585|F1_Macro: 0.7582
+Restyle_Test_Accuracy: 0.7581|Prec_Macro: 0.7596|Rec_Macro: 0.7581|F1_Macro: 0.7577
