@@ -1,0 +1,282 @@
+Dataset: politifact
+loading news articles
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:37<00:00,  2.39it/s]
+Iter 000 | Epoch 00000 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.46it/s]
+Iter 000 | Epoch 00001 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.47it/s]
+Iter 000 | Epoch 00002 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 000 | Epoch 00003 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 000 | Epoch 00004 complete
+100%|██████████| 23/23 [00:01<00:00, 17.09it/s]
+100%|██████████| 23/23 [00:01<00:00, 22.60it/s]
+-----------------End of Iter 000-----------------
+['Global Test Accuracy:0.9222', 'Precision:0.9327', 'Recall:0.9222', 'F1:0.9217']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8444', 'Precision:0.8451', 'Recall:0.8444', 'F1:0.8444']
+Dataset: politifact
+loading news articles
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.46it/s]
+Iter 001 | Epoch 00000 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 001 | Epoch 00001 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 001 | Epoch 00002 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 001 | Epoch 00003 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 001 | Epoch 00004 complete
+100%|██████████| 23/23 [00:01<00:00, 17.53it/s]
+100%|██████████| 23/23 [00:01<00:00, 22.60it/s]
+-----------------End of Iter 001-----------------
+['Global Test Accuracy:0.9222', 'Precision:0.9241', 'Recall:0.9222', 'F1:0.9221']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8444', 'Precision:0.8451', 'Recall:0.8444', 'F1:0.8444']
+Dataset: politifact
+loading news articles
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 002 | Epoch 00000 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.46it/s]
+Iter 002 | Epoch 00001 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 002 | Epoch 00002 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 002 | Epoch 00003 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.47it/s]
+Iter 002 | Epoch 00004 complete
+100%|██████████| 23/23 [00:01<00:00, 17.15it/s]
+100%|██████████| 23/23 [00:01<00:00, 22.53it/s]
+-----------------End of Iter 002-----------------
+['Global Test Accuracy:0.9444', 'Precision:0.9447', 'Recall:0.9444', 'F1:0.9444']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8444', 'Precision:0.8451', 'Recall:0.8444', 'F1:0.8444']
+Dataset: politifact
+loading news articles
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.47it/s]
+Iter 003 | Epoch 00000 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 003 | Epoch 00001 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.46it/s]
+Iter 003 | Epoch 00002 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.47it/s]
+Iter 003 | Epoch 00003 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 003 | Epoch 00004 complete
+100%|██████████| 23/23 [00:01<00:00, 17.66it/s]
+100%|██████████| 23/23 [00:01<00:00, 22.61it/s]
+-----------------End of Iter 003-----------------
+['Global Test Accuracy:0.9444', 'Precision:0.9500', 'Recall:0.9444', 'F1:0.9443']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8889', 'Precision:0.8897', 'Recall:0.8889', 'F1:0.8888']
+Dataset: politifact
+loading news articles
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.47it/s]
+Iter 004 | Epoch 00000 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 004 | Epoch 00001 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.46it/s]
+Iter 004 | Epoch 00002 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.47it/s]
+Iter 004 | Epoch 00003 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.47it/s]
+Iter 004 | Epoch 00004 complete
+100%|██████████| 23/23 [00:01<00:00, 17.49it/s]
+100%|██████████| 23/23 [00:01<00:00, 22.57it/s]
+-----------------End of Iter 004-----------------
+['Global Test Accuracy:0.7889', 'Precision:0.8516', 'Recall:0.7889', 'F1:0.7790']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7556', 'Precision:0.8358', 'Recall:0.7556', 'F1:0.7400']
+Dataset: politifact
+loading news articles
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.47it/s]
+Iter 005 | Epoch 00000 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 005 | Epoch 00001 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.46it/s]
+Iter 005 | Epoch 00002 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.47it/s]
+Iter 005 | Epoch 00003 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 005 | Epoch 00004 complete
+100%|██████████| 23/23 [00:01<00:00, 17.68it/s]
+100%|██████████| 23/23 [00:01<00:00, 22.57it/s]
+-----------------End of Iter 005-----------------
+['Global Test Accuracy:0.9222', 'Precision:0.9327', 'Recall:0.9222', 'F1:0.9217']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8222', 'Precision:0.8248', 'Recall:0.8222', 'F1:0.8219']
+Dataset: politifact
+loading news articles
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 006 | Epoch 00000 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 006 | Epoch 00001 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 006 | Epoch 00002 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.45it/s]
+Iter 006 | Epoch 00003 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.47it/s]
+Iter 006 | Epoch 00004 complete
+100%|██████████| 23/23 [00:01<00:00, 17.13it/s]
+100%|██████████| 23/23 [00:01<00:00, 22.51it/s]
+-----------------End of Iter 006-----------------
+['Global Test Accuracy:0.9111', 'Precision:0.9119', 'Recall:0.9111', 'F1:0.9111']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8111', 'Precision:0.8113', 'Recall:0.8111', 'F1:0.8111']
+Dataset: politifact
+loading news articles
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.47it/s]
+Iter 007 | Epoch 00000 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 007 | Epoch 00001 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 007 | Epoch 00002 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.47it/s]
+Iter 007 | Epoch 00003 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.46it/s]
+Iter 007 | Epoch 00004 complete
+100%|██████████| 23/23 [00:01<00:00, 17.40it/s]
+100%|██████████| 23/23 [00:01<00:00, 22.57it/s]
+-----------------End of Iter 007-----------------
+['Global Test Accuracy:0.9000', 'Precision:0.9050', 'Recall:0.9000', 'F1:0.8997']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8333', 'Precision:0.8335', 'Recall:0.8333', 'F1:0.8333']
+Dataset: politifact
+loading news articles
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.47it/s]
+Iter 008 | Epoch 00000 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.47it/s]
+Iter 008 | Epoch 00001 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 008 | Epoch 00002 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.46it/s]
+Iter 008 | Epoch 00003 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.47it/s]
+Iter 008 | Epoch 00004 complete
+100%|██████████| 23/23 [00:01<00:00, 17.18it/s]
+100%|██████████| 23/23 [00:01<00:00, 22.55it/s]
+-----------------End of Iter 008-----------------
+['Global Test Accuracy:0.9111', 'Precision:0.9119', 'Recall:0.9111', 'F1:0.9111']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8333', 'Precision:0.8375', 'Recall:0.8333', 'F1:0.8328']
+Dataset: politifact
+loading news articles
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.47it/s]
+Iter 009 | Epoch 00000 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 009 | Epoch 00001 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.48it/s]
+Iter 009 | Epoch 00002 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.47it/s]
+Iter 009 | Epoch 00003 complete
+loading news augmentations
+Dataset: politifact
+100%|██████████| 90/90 [00:36<00:00,  2.46it/s]
+Iter 009 | Epoch 00004 complete
+100%|██████████| 23/23 [00:01<00:00, 17.60it/s]
+100%|██████████| 23/23 [00:01<00:00, 22.59it/s]
+-----------------End of Iter 009-----------------
+['Global Test Accuracy:0.9222', 'Precision:0.9241', 'Recall:0.9222', 'F1:0.9221']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8444', 'Precision:0.8444', 'Recall:0.8444', 'F1:0.8444']
+Total_Test_Accuracy: 0.9089|Prec_Macro: 0.9189|Rec_Macro: 0.9089|F1_Macro: 0.9077
+Restyle_Test_Accuracy: 0.8322|Prec_Macro: 0.8412|Rec_Macro: 0.8322|F1_Macro: 0.8305
