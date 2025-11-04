@@ -1,0 +1,58 @@
+Dataset: lun
+loading news articles
+loading news augmentations
+Dataset: lun
+100%|██████████| 1500/1500 [10:06<00:00,  2.47it/s]
+Iter 000 | Epoch 00000 complete
+loading news augmentations
+Dataset: lun
+100%|██████████| 1500/1500 [10:04<00:00,  2.48it/s]
+Iter 000 | Epoch 00001 complete
+loading news augmentations
+Dataset: lun
+100%|██████████| 1500/1500 [10:04<00:00,  2.48it/s]
+Iter 000 | Epoch 00002 complete
+loading news augmentations
+Dataset: lun
+100%|██████████| 1500/1500 [10:05<00:00,  2.48it/s]
+Iter 000 | Epoch 00003 complete
+loading news augmentations
+Dataset: lun
+100%|██████████| 1500/1500 [10:05<00:00,  2.48it/s]
+Iter 000 | Epoch 00004 complete
+100%|██████████| 375/375 [00:17<00:00, 21.79it/s]
+100%|██████████| 375/375 [00:17<00:00, 22.03it/s]
+-----------------End of Iter 000-----------------
+['Global Test Accuracy:0.9100', 'Precision:0.9161', 'Recall:0.9100', 'F1:0.9097']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8847', 'Precision:0.8878', 'Recall:0.8847', 'F1:0.8844']
+Dataset: lun
+loading news articles
+loading news augmentations
+Dataset: lun
+100%|██████████| 1500/1500 [10:05<00:00,  2.48it/s]
+Iter 001 | Epoch 00000 complete
+loading news augmentations
+Dataset: lun
+100%|██████████| 1500/1500 [10:05<00:00,  2.48it/s]
+Iter 001 | Epoch 00001 complete
+loading news augmentations
+Dataset: lun
+100%|██████████| 1500/1500 [10:05<00:00,  2.48it/s]
+Iter 001 | Epoch 00002 complete
+loading news augmentations
+Dataset: lun
+100%|██████████| 1500/1500 [10:05<00:00,  2.48it/s]
+Iter 001 | Epoch 00003 complete
+loading news augmentations
+Dataset: lun
+100%|██████████| 1500/1500 [10:05<00:00,  2.48it/s]
+Iter 001 | Epoch 00004 complete
+100%|██████████| 375/375 [00:17<00:00, 21.82it/s]
+100%|██████████| 375/375 [00:16<00:00, 22.06it/s]
+-----------------End of Iter 001-----------------
+['Global Test Accuracy:0.9240', 'Precision:0.9291', 'Recall:0.9240', 'F1:0.9238']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.8967', 'Precision:0.8985', 'Recall:0.8967', 'F1:0.8965']
+Total_Test_Accuracy: 0.9170|Prec_Macro: 0.9226|Rec_Macro: 0.9170|F1_Macro: 0.9167
+Restyle_Test_Accuracy: 0.8907|Prec_Macro: 0.8931|Rec_Macro: 0.8907|F1_Macro: 0.8905
