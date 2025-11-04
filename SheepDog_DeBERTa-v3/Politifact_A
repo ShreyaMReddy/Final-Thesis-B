@@ -49,7 +49,6 @@ torch.backends.cudnn.deterministic = True
 torch.cuda.manual_seed_all(0)
 
 
-# ======================= DATASETS ======================= #
 class NewsDatasetAug(Dataset):
     def __init__(self, texts, aug_texts1, aug_texts2, labels, fg_label, aug_fg1, aug_fg2, tokenizer, max_len):
         self.texts = texts
@@ -131,7 +130,6 @@ class NewsDataset(Dataset):
         return len(self.texts)
 
 
-# ======================= MODEL ======================= #
 class DebertaClassifier(nn.Module):
     def __init__(self, n_classes):
         super(DebertaClassifier, self).__init__()
@@ -142,14 +140,13 @@ class DebertaClassifier(nn.Module):
 
     def forward(self, input_ids, attention_mask):
         outputs = self.deberta(input_ids=input_ids, attention_mask=attention_mask)
-        pooled_output = outputs.last_hidden_state[:, 0, :]  # CLS token
+        pooled_output = outputs.last_hidden_state[:, 0, :] 
         pooled_output = self.dropout(pooled_output)
         output = self.fc_out(pooled_output)
         binary_output = self.binary_transform(pooled_output)
         return output, binary_output
 
 
-# ======================= LOADERS ======================= #
 def create_train_loader(contents, contents_aug1, contents_aug2, labels, fg_label, aug_fg1, aug_fg2, tokenizer, max_len, batch_size):
     ds = NewsDatasetAug(texts=contents, aug_texts1=contents_aug1, aug_texts2=contents_aug2,
                         labels=np.array(labels), fg_label=fg_label, aug_fg1=aug_fg1, aug_fg2=aug_fg2,
@@ -162,7 +159,6 @@ def create_eval_loader(contents, labels, tokenizer, max_len, batch_size):
     return DataLoader(ds, batch_size=batch_size, num_workers=0)
 
 
-# ======================= UTILITIES ======================= #
 def set_seed(seed):
     torch.manual_seed(seed)
     np.random.seed(seed)
@@ -178,7 +174,7 @@ def load_articles(obj):
     print("loading news articles")
     train_dict = pickle.load(open('data/news_articles/' + obj + '_train.pkl', 'rb'))
     test_dict = pickle.load(open('data/news_articles/' + obj + '_test.pkl', 'rb'))
-    #
+    
     restyle_dict = pickle.load(open('data/adversarial_test/' + obj + '_test_adv_A.pkl', 'rb'))
 
     x_train, y_train = train_dict['news'], train_dict['labels']
@@ -216,7 +212,6 @@ def load_reframing(obj):
     return x_train_res1, x_train_res2, y_train_fg, y_train_fg_m, y_train_fg_t
 
 
-# ======================= TRAINING ======================= #
 def train_model(tokenizer, max_len, n_epochs, batch_size, datasetname, iter):
     x_train, x_test, x_test_res, y_train, y_test = load_articles(datasetname)
     test_loader = create_eval_loader(x_test, y_test, tokenizer, max_len, batch_size)
@@ -265,7 +260,6 @@ def train_model(tokenizer, max_len, n_epochs, batch_size, datasetname, iter):
             scheduler.step()
         print(f"Iter {iter:03d} | Epoch {epoch:05d} complete")
 
-    # ======== EVAL ======== #
     model.eval()
     y_pred, y_pred_res, y_true = [], [], []
     for Batch_data in tqdm(test_loader):
@@ -305,7 +299,7 @@ def train_model(tokenizer, max_len, n_epochs, batch_size, datasetname, iter):
     return acc, precision, recall, fscore, acc_res, precision_res, recall_res, fscore_res
 
 
-# ======================= MAIN ======================= #
+
 datasetname = args.dataset_name
 batch_size = args.batch_size
 max_len = 512
