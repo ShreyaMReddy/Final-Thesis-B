@@ -1,0 +1,58 @@
+Dataset: gossipcop
+loading news articles
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:41<00:00,  2.47it/s]
+Iter 000 | Epoch 00000 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:39<00:00,  2.48it/s]
+Iter 000 | Epoch 00001 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:40<00:00,  2.47it/s]
+Iter 000 | Epoch 00002 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:40<00:00,  2.47it/s]
+Iter 000 | Epoch 00003 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:40<00:00,  2.47it/s]
+Iter 000 | Epoch 00004 complete
+100%|██████████| 396/396 [00:20<00:00, 19.00it/s]
+100%|██████████| 396/396 [00:18<00:00, 21.93it/s]
+-----------------End of Iter 000-----------------
+['Global Test Accuracy:0.7576', 'Precision:0.7606', 'Recall:0.7576', 'F1:0.7569']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7569', 'Precision:0.7614', 'Recall:0.7569', 'F1:0.7559']
+Dataset: gossipcop
+loading news articles
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:40<00:00,  2.47it/s]
+Iter 001 | Epoch 00000 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:40<00:00,  2.47it/s]
+Iter 001 | Epoch 00001 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:40<00:00,  2.47it/s]
+Iter 001 | Epoch 00002 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:42<00:00,  2.46it/s]
+Iter 001 | Epoch 00003 complete
+loading news augmentations
+Dataset: gossipcop
+100%|██████████| 1583/1583 [10:41<00:00,  2.47it/s]
+Iter 001 | Epoch 00004 complete
+100%|██████████| 396/396 [00:20<00:00, 19.55it/s]
+100%|██████████| 396/396 [00:17<00:00, 22.11it/s]
+-----------------End of Iter 001-----------------
+['Global Test Accuracy:0.7576', 'Precision:0.7578', 'Recall:0.7576', 'F1:0.7575']
+-----------------Restyle-----------------
+['Global Test Accuracy:0.7563', 'Precision:0.7563', 'Recall:0.7563', 'F1:0.7563']
+Total_Test_Accuracy: 0.7576|Prec_Macro: 0.7592|Rec_Macro: 0.7576|F1_Macro: 0.7572
+Restyle_Test_Accuracy: 0.7566|Prec_Macro: 0.7588|Rec_Macro: 0.7566|F1_Macro: 0.7561
