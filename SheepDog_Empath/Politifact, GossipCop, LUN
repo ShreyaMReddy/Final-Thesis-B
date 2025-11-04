@@ -1,0 +1,541 @@
+!pip install --upgrade pip
+
+!pip install -U "torch" "torchvision==0.20.1" "torchaudio==2.5.1" \
+  --index-url https://download.pytorch.org/whl/cu121
+!pip install -U transformers==4.41.0 safetensors sentencepiece datasets scikit-learn tqdm
+
+
+!pip install empath
+
+!pip install scikit-learn tqdm
+
+!pip install matplotlib seaborn
+
+!git clone https://github.com/jiayingwu19/SheepDog
+
+%cd /content/SheepDog
+!ls -la
+
+import sys, os
+sys.path.insert(0, os.getcwd())
+
+from utils.load_data import *
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from torch.utils.data import Dataset, DataLoader
+from transformers import AutoModel, AutoTokenizer, AdamW, get_linear_schedule_with_warmup
+import argparse
+import numpy as np
+import sys, os
+sys.path.append(os.getcwd())
+import warnings
+from sklearn.metrics import precision_recall_fscore_support as score
+from sklearn.metrics import accuracy_score
+from tqdm import tqdm
+warnings.filterwarnings("ignore")
+
+try:
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--dataset_name', default='politifact', type=str)
+    #alternatively, change to default='gossipcop', default='lun'
+    parser.add_argument('--model_name', default='sheepdog-xl', type=str)
+    parser.add_argument('--iters', default=2, type=int)
+    parser.add_argument('--batch_size', default=4, type=int)
+    parser.add_argument('--n_epochs', default=5, type=int)
+    parser.add_argument('--alpha', default=1.0, type=float, help='Weight for style loss')
+    parser.add_argument('--beta', default=0.8, type=float, help='Weight for Empath regression loss')
+
+    parser.add_argument('-f', '--file', type=str, help='Jupyter kernel file', default=None)
+
+    args, unknown = parser.parse_known_args()
+except SystemExit:
+ 
+    args = argparse.Namespace(
+        dataset_name='politifact',
+        model_name='Pretrained-LM',
+        iters=2,
+        batch_size=4,
+        n_epochs=5,
+        alpha=1.0,
+        beta=0.2
+    )
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+torch.manual_seed(0)
+np.random.seed(0)
+torch.backends.cudnn.deterministic = True
+if torch.cuda.is_available():
+    torch.cuda.manual_seed_all(0)
+
+class NewsDatasetAug(Dataset):
+    def __init__(self, texts, aug_texts1, aug_texts2, labels, fg_label, aug_fg1, aug_fg2,
+                 empath_features, empath_aug1, empath_aug2, tokenizer, max_len):
+        self.texts = texts
+        self.aug_texts1 = aug_texts1
+        self.aug_texts2 = aug_texts2
+        self.tokenizer = tokenizer
+        self.max_len = max_len
+        self.labels = labels
+        self.fg_label = fg_label
+        self.aug_fg1 = aug_fg1
+        self.aug_fg2 = aug_fg2
+        self.empath_features = empath_features
+        self.empath_aug1 = empath_aug1
+        self.empath_aug2 = empath_aug2
+
+    def __getitem__(self, item):
+        text = self.texts[item]
+        aug_text1 = self.aug_texts1[item]
+        aug_text2 = self.aug_texts2[item]
+        label = self.labels[item]
+        fg_label = self.fg_label[item]
+        aug_fg1 = self.aug_fg1[item]
+        aug_fg2 = self.aug_fg2[item]
+        empath = self.empath_features[item]
+        empath_aug1 = self.empath_aug1[item]
+        empath_aug2 = self.empath_aug2[item]
+
+        encoding = self.tokenizer.encode_plus(
+            text, add_special_tokens=True, max_length=self.max_len,
+            padding="max_length", truncation=True,
+            return_token_type_ids=False, return_attention_mask=True, return_tensors='pt'
+        )
+
+        aug1_encoding = self.tokenizer.encode_plus(
+            aug_text1, add_special_tokens=True, max_length=self.max_len,
+            padding="max_length", truncation=True,
+            return_token_type_ids=False, return_attention_mask=True, return_tensors='pt'
+        )
+
+        aug2_encoding = self.tokenizer.encode_plus(
+            aug_text2, add_special_tokens=True, max_length=self.max_len,
+            padding="max_length", truncation=True,
+            return_token_type_ids=False, return_attention_mask=True, return_tensors='pt'
+        )
+
+        return {
+            'input_ids': encoding['input_ids'].flatten(),
+            'input_ids_aug1': aug1_encoding['input_ids'].flatten(),
+            'input_ids_aug2': aug2_encoding['input_ids'].flatten(),
+            'attention_mask': encoding['attention_mask'].flatten(),
+            'attention_mask_aug1': aug1_encoding['attention_mask'].flatten(),
+            'attention_mask_aug2': aug2_encoding['attention_mask'].flatten(),
+            'labels': torch.tensor(label, dtype=torch.long),
+            'fg_label': torch.FloatTensor(fg_label),
+            'fg_label_aug1': torch.FloatTensor(aug_fg1),
+            'fg_label_aug2': torch.FloatTensor(aug_fg2),
+            'empath_features': torch.FloatTensor(empath),
+            'empath_aug1': torch.FloatTensor(empath_aug1),
+            'empath_aug2': torch.FloatTensor(empath_aug2),
+        }
+
+    def __len__(self):
+        return len(self.texts)
+
+
+class NewsDataset(Dataset):
+    def __init__(self, texts, labels, empath_features, tokenizer, max_len):
+        self.texts = texts
+        self.labels = labels
+        self.empath_features = empath_features
+        self.tokenizer = tokenizer
+        self.max_len = max_len
+
+    def __getitem__(self, item):
+        text = self.texts[item]
+        label = self.labels[item]
+        empath = self.empath_features[item]
+        encoding = self.tokenizer.encode_plus(
+            text, add_special_tokens=True, max_length=self.max_len,
+            padding="max_length", truncation=True,
+            return_token_type_ids=False, return_attention_mask=True, return_tensors='pt'
+        )
+
+        return {
+            'news_text': text,
+            'input_ids': encoding['input_ids'].flatten(),
+            'attention_mask': encoding['attention_mask'].flatten(),
+            'labels': torch.tensor(label, dtype=torch.long),
+            'empath_features': torch.FloatTensor(empath)
+        }
+
+    def __len__(self):
+        return len(self.texts)
+
+class RoBERTaClassifierWithempath(nn.Module):
+   
+    def __init__(self, n_classes, n_empath_features, backbone="roberta-base"):
+        super().__init__()
+        self.backbone = AutoModel.from_pretrained(backbone)
+        hidden_size = self.backbone.config.hidden_size
+
+        self.dropout = nn.Dropout(p=0.5)
+        self.veracity_head = nn.Linear(hidden_size, 2)
+        self.attribution_head = nn.Linear(hidden_size, n_classes)
+        self.style_head = nn.Linear(hidden_size + n_empath_features, 4)
+        self.empath_regressor = nn.Linear(hidden_size, n_empath_features)
+
+    def mean_pooling(self, last_hidden_state, attention_mask):
+        mask = attention_mask.unsqueeze(-1)
+        masked = last_hidden_state * mask
+        summed = masked.sum(dim=1)
+        denom = mask.sum(dim=1).clamp(min=1e-9)
+        return summed / denom
+
+    def forward(self, input_ids, attention_mask, empath_features):
+        outputs = self.backbone(input_ids=input_ids, attention_mask=attention_mask)
+        pooled = self.mean_pooling(outputs.last_hidden_state, attention_mask)
+        pooled = self.dropout(pooled)
+
+        veracity_out = self.veracity_head(pooled)
+        attribution_out = self.attribution_head(pooled)
+        empath_pred = self.empath_regressor(pooled)
+
+        style_out = None
+        if empath_features is not None:
+            style_input = torch.cat([pooled, empath_features], dim=1)
+            style_out = self.style_head(style_input)
+
+        return veracity_out, attribution_out, style_out, empath_pred, pooled
+
+
+def create_train_loader(contents, contents_aug1, contents_aug2, labels, fg_label, aug_fg1, aug_fg2,
+                       empath_features, empath_aug1, empath_aug2, tokenizer, max_len, batch_size):
+    ds = NewsDatasetAug(
+        texts=contents, aug_texts1=contents_aug1, aug_texts2=contents_aug2,
+        labels=np.array(labels), fg_label=fg_label, aug_fg1=aug_fg1, aug_fg2=aug_fg2,
+        empath_features=empath_features, empath_aug1=empath_aug1, empath_aug2=empath_aug2,
+        tokenizer=tokenizer, max_len=max_len
+    )
+    return DataLoader(ds, batch_size=batch_size, shuffle=True, num_workers=0)
+
+def create_eval_loader(contents, labels, empath_features, tokenizer, max_len, batch_size):
+    ds = NewsDataset(texts=contents, labels=np.array(labels), empath_features=empath_features,
+                    tokenizer=tokenizer, max_len=max_len)
+    return DataLoader(ds, batch_size=batch_size, num_workers=0)
+
+
+def set_seed(seed):
+    torch.manual_seed(seed)
+    np.random.seed(seed)
+    torch.backends.cudnn.deterministic = True
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+
+
+
+
+import pickle
+import numpy as np
+
+
+def load_articles(obj):
+    print('Dataset: ', obj)
+    print("loading news articles")
+
+    train_dict = pickle.load(open('data/news_articles/' + obj + '_train.pkl', 'rb'))
+    test_dict = pickle.load(open('data/news_articles/' + obj + '_test.pkl', 'rb'))
+
+    restyle_dict = pickle.load(open('data/adversarial_test/' + obj+ '_test_adv_A.pkl', 'rb'))
+    # alternatively, switch to loading other adversarial test sets with 'test_adv[B/C/D].pkl'
+
+    x_train, y_train = train_dict['news'], train_dict['labels']
+    x_test, y_test = test_dict['news'], test_dict['labels']
+
+    x_test_res = restyle_dict['news']
+
+    return x_train, x_test, x_test_res, y_train, y_test
+
+
+def load_reframing(obj):
+    print("loading news augmentations")
+    print('Dataset: ', obj)
+
+    restyle_dict_train1_1 = pickle.load(open('data/reframings/' + obj+ '_train_objective.pkl', 'rb'))
+    restyle_dict_train1_2 = pickle.load(open('data/reframings/' + obj+ '_train_neutral.pkl', 'rb'))
+    restyle_dict_train2_1 = pickle.load(open('data/reframings/' + obj+ '_train_emotionally_triggering.pkl', 'rb'))
+    restyle_dict_train2_2 = pickle.load(open('data/reframings/' + obj+ '_train_sensational.pkl', 'rb'))
+
+    finegrain_dict1 = pickle.load(open('data/veracity_attributions/' + obj+ '_fake_standards_objective_emotionally_triggering.pkl', 'rb'))
+    finegrain_dict2 = pickle.load(open('data/veracity_attributions/' + obj+ '_fake_standards_neutral_sensational.pkl', 'rb'))
+
+    x_train_res1 = np.array(restyle_dict_train1_1['rewritten'])
+    x_train_res1_2 = np.array(restyle_dict_train1_2['rewritten'])
+    x_train_res2 = np.array(restyle_dict_train2_1['rewritten'])
+    x_train_res2_2 = np.array(restyle_dict_train2_2['rewritten'])
+
+    y_train_fg, y_train_fg_m, y_train_fg_t = finegrain_dict1['orig_fg'], finegrain_dict1['mainstream_fg'], finegrain_dict1['tabloid_fg']
+    y_train_fg2, y_train_fg_m2, y_train_fg_t2 = finegrain_dict2['orig_fg'], finegrain_dict2['mainstream_fg'], finegrain_dict2['tabloid_fg']
+
+    replace_idx = np.random.choice(len(x_train_res1), len(x_train_res1) // 2, replace=False)
+
+    x_train_res1[replace_idx] = x_train_res1_2[replace_idx]
+    x_train_res2[replace_idx] = x_train_res2_2[replace_idx]
+    y_train_fg[replace_idx] = y_train_fg2[replace_idx]
+    y_train_fg_m[replace_idx] = y_train_fg_m2[replace_idx]
+    y_train_fg_t[replace_idx] = y_train_fg_t2[replace_idx]
+
+
+    return x_train_res1, x_train_res2, y_train_fg, y_train_fg_m, y_train_fg_t
+
+
+from empath import Empath
+lexicon = Empath()
+
+def extract_empath_features(texts):
+    selected_categories = ["anger", "joy", "sadness", "certainty", "negation"]
+    features = []
+
+    for text in texts:
+        counts = lexicon.analyze(text, normalize=True)
+        feature_vector = []
+        for c in selected_categories:
+           
+            feature_vector.append(counts.get(c, 0.0))
+        features.append(feature_vector)
+
+    return np.array(features)
+
+
+
+datasetname = args.dataset_name
+x_train, x_test, x_test_res, y_train, y_test = load_articles(datasetname)
+empath_test = extract_empath_features(x_test)
+empath_test_res = extract_empath_features(x_test_res)
+print("empath features extracted",empath_test)
+
+def train_model(tokenizer, max_len, n_epochs, batch_size, datasetname, iter):
+    x_train, x_test, x_test_res, y_train, y_test = load_articles(datasetname)
+
+
+    empath_train = extract_empath_features(x_train)
+    empath_test = extract_empath_features(x_test)
+    empath_test_res = extract_empath_features(x_test_res)
+    print("empath features extracted",empath_test)
+
+    test_loader = create_eval_loader(x_test, y_test, empath_test, tokenizer, max_len, batch_size)
+    test_loader_res = create_eval_loader(x_test_res, y_test, empath_test_res, tokenizer, max_len, batch_size)
+
+    n_empath_features = empath_train.shape[1]
+    model = RoBERTaClassifierWithempath(n_classes=4, n_empath_features=n_empath_features).to(device)
+    train_losses = []
+    train_accs = []
+    optimizer = AdamW(model.parameters(), lr=2e-5)
+    total_steps = 10000
+    scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=0, num_training_steps=total_steps)
+
+    veracity_criterion = nn.CrossEntropyLoss()
+    attribution_criterion = nn.BCEWithLogitsLoss()
+    style_criterion = nn.CrossEntropyLoss()
+    empath_criterion = nn.MSELoss()
+
+    for epoch in range(n_epochs):
+        model.train()
+        x_train_res1, x_train_res2, y_train_fg, y_train_fg_m, y_train_fg_t = load_reframing(args.dataset_name)
+
+        empath_train_res1 = extract_empath_features(x_train_res1)
+        empath_train_res2 = extract_empath_features(x_train_res2)
+
+        train_loader = create_train_loader(
+            x_train, x_train_res1, x_train_res2, y_train, y_train_fg, y_train_fg_m, y_train_fg_t,
+            empath_train, empath_train_res1, empath_train_res2, tokenizer, max_len, batch_size
+        )
+
+        avg_loss = []
+        avg_acc = []
+
+        for Batch_data in tqdm(train_loader):
+          
+            input_ids = Batch_data["input_ids"].to(device)
+            attention_mask = Batch_data["attention_mask"].to(device)
+            input_ids_aug1 = Batch_data["input_ids_aug1"].to(device)
+            attention_mask_aug1 = Batch_data["attention_mask_aug1"].to(device)
+            input_ids_aug2 = Batch_data["input_ids_aug2"].to(device)
+            attention_mask_aug2 = Batch_data["attention_mask_aug2"].to(device)
+
+          
+            veracity_targets = Batch_data["labels"].to(device)
+            attribution_targets = Batch_data["fg_label"].to(device)
+            attribution_aug1 = Batch_data["fg_label_aug1"].to(device)
+            attribution_aug2 = Batch_data["fg_label_aug2"].to(device)
+
+          
+            empath_features = Batch_data["empath_features"].to(device)
+            empath_aug1 = Batch_data["empath_aug1"].to(device)
+            empath_aug2 = Batch_data["empath_aug2"].to(device)
+
+           
+            veracity_out, attribution_out, style_out, empath_pred, _ = model(
+                input_ids, attention_mask, empath_features
+            )
+            veracity_aug1, attribution_aug1_out, style_aug1, empath_pred_aug1, _ = model(
+                input_ids_aug1, attention_mask_aug1, empath_aug1
+            )
+            veracity_aug2, attribution_aug2_out, style_aug2, empath_pred_aug2, _ = model(
+                input_ids_aug2, attention_mask_aug2, empath_aug2
+            )
+
+           
+            veracity_loss = veracity_criterion(veracity_out, veracity_targets)
+
+            
+            attribution_loss = (attribution_criterion(attribution_out, attribution_targets) +
+                              attribution_criterion(attribution_aug1_out, attribution_aug1) +
+                              attribution_criterion(attribution_aug2_out, attribution_aug2)) / 3
+
+            style_targets = torch.argmax(attribution_targets, dim=1)
+            style_aug1_targets = torch.argmax(attribution_aug1, dim=1)
+            style_aug2_targets = torch.argmax(attribution_aug2, dim=1)
+
+            style_loss = (style_criterion(style_aug1, style_aug1_targets) +
+                         style_criterion(style_aug2, style_aug2_targets)) / 2
+
+       
+            empath_loss = (empath_criterion(empath_pred, empath_features) +
+                        empath_criterion(empath_pred_aug1, empath_aug1) +
+                        empath_criterion(empath_pred_aug2, empath_aug2)) / 3
+
+            orig_probs = F.softmax(veracity_out, dim=-1)
+            aug1_probs = F.softmax(veracity_aug1, dim=-1)
+            aug2_probs = F.softmax(veracity_aug2, dim=-1)
+
+            align_criterion = nn.KLDivLoss(reduction='batchmean')
+            align_loss = (align_criterion(F.log_softmax(veracity_aug1, dim=-1), orig_probs) +
+                         align_criterion(F.log_softmax(veracity_aug2, dim=-1), orig_probs)) / 2
+
+            total_loss = (veracity_loss + attribution_loss + align_loss +
+                         args.alpha * style_loss + args.beta * empath_loss)
+
+            optimizer.zero_grad()
+            total_loss.backward()
+            avg_loss.append(total_loss.item())
+            optimizer.step()
+            scheduler.step()
+
+            _, pred = veracity_out.max(dim=-1)
+            correct = pred.eq(veracity_targets).sum().item()
+            train_acc = correct / len(veracity_targets)
+            avg_acc.append(train_acc)
+
+        train_losses.append(np.mean(avg_loss))
+        train_accs.append(np.mean(avg_acc))
+
+        print("Iter {:03d} | Epoch {:05d} | Train Acc. {:.4f} | Loss {:.4f}".format(
+            iter, epoch, np.mean(avg_acc), np.mean(avg_loss)))
+
+        if epoch == n_epochs - 1:
+            model.eval()
+            y_pred = []
+            y_pred_res = []
+            y_test_list = []
+
+            for Batch_data in tqdm(test_loader):
+                with torch.no_grad():
+                    input_ids = Batch_data["input_ids"].to(device)
+                    attention_mask = Batch_data["attention_mask"].to(device)
+                    targets = Batch_data["labels"].to(device)
+                    empath_features = Batch_data["empath_features"].to(device)
+
+                    veracity_out, _, _, _, _ = model(input_ids, attention_mask, empath_features)
+                    _, val_pred = veracity_out.max(dim=1)
+
+                    y_pred.append(val_pred)
+                    y_test_list.append(targets)
+
+            for Batch_data in tqdm(test_loader_res):
+                with torch.no_grad():
+                    input_ids_aug = Batch_data["input_ids"].to(device)
+                    attention_mask_aug = Batch_data["attention_mask"].to(device)
+                    empath_features = Batch_data["empath_features"].to(device)
+
+                    veracity_out, _, _, _, _ = model(input_ids_aug, attention_mask_aug, empath_features)
+                    _, val_pred_aug = veracity_out.max(dim=1)
+                    y_pred_res.append(val_pred_aug)
+
+            y_pred = torch.cat(y_pred, dim=0)
+            y_test_tensor = torch.cat(y_test_list, dim=0)
+            y_pred_res = torch.cat(y_pred_res, dim=0)
+
+            acc = accuracy_score(y_test_tensor.detach().cpu().numpy(), y_pred.detach().cpu().numpy())
+            precision, recall, fscore, _ = score(y_test_tensor.detach().cpu().numpy(), y_pred.detach().cpu().numpy(), average='macro')
+
+            acc_res = accuracy_score(y_test_tensor.detach().cpu().numpy(), y_pred_res.detach().cpu().numpy())
+            precision_res, recall_res, fscore_res, _ = score(y_test_tensor.detach().cpu().numpy(), y_pred_res.detach().cpu().numpy(), average='macro')
+
+    torch.save(model.state_dict(), 'checkpoints/' + datasetname + '_iter' + str(iter) + '.m')
+
+    print("-----------------End of Iter {:03d}-----------------".format(iter))
+    print(['Global Test Accuracy:{:.4f}'.format(acc),
+           'Precision:{:.4f}'.format(precision),
+           'Recall:{:.4f}'.format(recall),
+           'F1:{:.4f}'.format(fscore)])
+
+    print("-----------------Restyle-----------------")
+    print(['Global Test Accuracy:{:.4f}'.format(acc_res),
+           'Precision:{:.4f}'.format(precision_res),
+           'Recall:{:.4f}'.format(recall_res),
+           'F1:{:.4f}'.format(fscore_res)])
+
+    return acc, precision, recall, fscore, acc_res, precision_res, recall_res, fscore_res
+
+
+def main():
+    datasetname = args.dataset_name
+    batch_size = args.batch_size
+    max_len = 512
+    tokenizer = AutoTokenizer.from_pretrained("roberta-base")
+    n_epochs = args.n_epochs
+    iterations = args.iters
+
+    test_accs = []
+    prec_all, rec_all, f1_all = [], [], []
+    test_accs_res = []
+    prec_all_res, rec_all_res, f1_all_res = [], [], []
+
+    for iter in range(iterations):
+        set_seed(iter)
+        acc, prec, recall, f1, \
+        acc_res, prec_res, recall_res, f1_res = train_model(
+            tokenizer, max_len, n_epochs, batch_size, datasetname, iter
+        )
+
+        test_accs.append(acc)
+        prec_all.append(prec)
+        rec_all.append(recall)
+        f1_all.append(f1)
+        test_accs_res.append(acc_res)
+        prec_all_res.append(prec_res)
+        rec_all_res.append(recall_res)
+        f1_all_res.append(f1_res)
+
+    print("Total_Test_Accuracy: {:.4f}|Prec_Macro: {:.4f}|Rec_Macro: {:.4f}|F1_Macro: {:.4f}".format(
+        sum(test_accs) / iterations, sum(prec_all) / iterations, sum(rec_all) / iterations, sum(f1_all) / iterations))
+
+    print("Restyle_Test_Accuracy: {:.4f}|Prec_Macro: {:.4f}|Rec_Macro: {:.4f}|F1_Macro: {:.4f}".format(
+        sum(test_accs_res) / iterations, sum(prec_all_res) / iterations, sum(rec_all_res) / iterations, sum(f1_all_res) / iterations))
+
+    os.makedirs('logs', exist_ok=True)
+    with open('logs/log_' + datasetname + '_' + args.model_name + '.' + 'iter' + str(iterations), 'a+') as f:
+        f.write('-------------Original-------------\n')
+        f.write('All Acc.s:{}\n'.format(test_accs))
+        f.write('All Prec.s:{}\n'.format(prec_all))
+        f.write('All Rec.s:{}\n'.format(rec_all))
+        f.write('All F1.s:{}\n'.format(f1_all))
+        f.write('Average acc.: {} \n'.format(sum(test_accs) / iterations))
+        f.write('Average Prec / Rec / F1 (macro): {}, {}, {} \n'.format(sum(prec_all) / iterations, sum(rec_all) / iterations, sum(f1_all) / iterations))
+
+        f.write('\n-------------Adversarial------------\n')
+        f.write('All Acc.s:{}\n'.format(test_accs_res))
+        f.write('All Prec.s:{}\n'.format(prec_all_res))
+        f.write('All Rec.s:{}\n'.format(rec_all_res))
+        f.write('All F1.s:{}\n'.format(f1_all_res))
+        f.write('Average acc.: {} \n'.format(sum(test_accs_res) / iterations))
+        f.write('Average Prec / Rec / F1 (macro): {}, {}, {} \n'.format(sum(prec_all_res) / iterations, sum(rec_all_res) / iterations, sum(f1_all_res) / iterations))
+
+
+if __name__ == "__main__":
+    main()
+
